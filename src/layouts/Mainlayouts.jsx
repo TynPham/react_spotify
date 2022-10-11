@@ -2,6 +2,7 @@ import React from "react";
 import Topnav from "../components/top-nav/Topnav";
 import Sidebar from "../components/side-bar/Sidebar";
 import { Outlet } from "react-router-dom";
+import PlayBar from "../components/playBar/PlayBar";
 
 const Mainlayouts = () => {
   return (
@@ -12,6 +13,8 @@ const Mainlayouts = () => {
         <Sidebar />
         <Outlet />
       </div>
+
+      <PlayBar />
     </>
   );
 };
