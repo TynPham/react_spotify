@@ -1,10 +1,5 @@
 export const Img = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 167.5 167.5"
-    className="spotify-logo"
-  >
+  <svg width="32" height="32" viewBox="0 0 167.5 167.5">
     <title>Spotify</title>
     <path
       fill="currentColor"
@@ -13,13 +8,7 @@ export const Img = () => (
   </svg>
 );
 export const Homeicon = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    className="Svg-ytk21e-0 jAKAlG home-icon"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
     <path
       fill="hsla(0,0%,100%,.7)"
       d="M12.5 3.247a1 1 0 00-1 0L4 7.577V20h4.5v-6a1 1 0 011-1h5a1 1 0 011 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 013 0l7.5 4.33a2 2 0 011 1.732V21a1 1 0 01-1 1h-6.5a1 1 0 01-1-1v-6h-3v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7.577a2 2 0 011-1.732l7.5-4.33z"
@@ -27,14 +16,7 @@ export const Homeicon = () => (
   </svg>
 );
 export const SearchIcon = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    className="Svg-ytk21e-0 jAKAlG mOLTJ2mxkzHJj6Y9_na_"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24">
     <path
       fill="hsla(0,0%,100%,.7)"
       d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
@@ -48,7 +30,7 @@ export const UserIcon = () => (
     width="16"
     aria-hidden="true"
     viewBox="0 0 16 16"
-    className="Svg-ytk21e-0 jAKAlG inline mb-[8px]"
+    className="inline mb-[8px]"
   >
     <path
       fill="#fff"
@@ -57,13 +39,7 @@ export const UserIcon = () => (
   </svg>
 );
 export const CloseIcon = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    className="Svg-ytk21e-0 jAKAlG mOLTJ2mxkzHJj6Y9_na_"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
     <path
       fill="#fff"
       d="M3.293 3.293a1 1 0 011.414 0L12 10.586l7.293-7.293a1 1 0 111.414 1.414L13.414 12l7.293 7.293a1 1 0 01-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 01-1.414-1.414L10.586 12 3.293 4.707a1 1 0 010-1.414z"
@@ -71,14 +47,7 @@ export const CloseIcon = () => (
   </svg>
 );
 export const LibraryIcon = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    className="Svg-ytk21e-0 jAKAlG collection-active-icon"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24">
     <path
       fill="#fff"
       d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM15.5 2.134A1 1 0 0014 3v18a1 1 0 001 1h6a1 1 0 001-1V6.464a1 1 0 00-.5-.866l-6-3.464zM9 2a1 1 0 00-1 1v18a1 1 0 102 0V3a1 1 0 00-1-1z"
@@ -86,14 +55,7 @@ export const LibraryIcon = () => (
   </svg>
 );
 export const LibraryIcon2 = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    className="Svg-ytk21e-0 jAKAlG collection-icon"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24">
     <path
       fill="#fff"
       d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"
@@ -101,14 +63,7 @@ export const LibraryIcon2 = () => (
   </svg>
 );
 export const PlusIcon = () => (
-  <svg
-    role="img"
-    height="12"
-    width="12"
-    aria-hidden="true"
-    viewBox="0 0 16 16"
-    className="Svg-ytk21e-0 jAKAlG"
-  >
+  <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16">
     <path
       fill="#000000"
       d="M15.25 8a.75.75 0 01-.75.75H8.75v5.75a.75.75 0 01-1.5 0V8.75H1.5a.75.75 0 010-1.5h5.75V1.5a.75.75 0 011.5 0v5.75h5.75a.75.75 0 01.75.75z"
@@ -116,14 +71,7 @@ export const PlusIcon = () => (
   </svg>
 );
 export const HeartIcon = () => (
-  <svg
-    role="img"
-    height="12"
-    width="12"
-    aria-hidden="true"
-    viewBox="0 0 16 16"
-    className="Svg-ytk21e-0 jAKAlG"
-  >
+  <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16">
     <path
       fill="#b7b7b7"
       d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"
@@ -131,14 +79,7 @@ export const HeartIcon = () => (
   </svg>
 );
 export const DownIcon = () => (
-  <svg
-    role="img"
-    height="24"
-    width="24"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    className="Svg-ytk21e-0 jAKAlG"
-  >
+  <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24">
     <path
       fill="#fff"
       d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"
@@ -146,6 +87,39 @@ export const DownIcon = () => (
     <path
       fill="#fff"
       d="M12 6.05a1 1 0 011 1v7.486l1.793-1.793a1 1 0 111.414 1.414L12 18.364l-4.207-4.207a1 1 0 111.414-1.414L11 14.536V7.05a1 1 0 011-1z"
+    ></path>
+  </svg>
+);
+export const PlayIcon = () => (
+  <svg role="img" height="28" width="28" viewBox="0 0 24 24" className="inline">
+    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+  </svg>
+);
+export const HeartLgIcon = () => (
+  <svg role="img" height="32" width="32" viewBox="0 0 24 24">
+    <path
+      fill="#fff"
+      d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"
+    ></path>
+  </svg>
+);
+export const ETCIcon = () => (
+  <svg role="img" height="32" width="32" viewBox="0 0 24 24">
+    <path
+      fill="currentcolor"
+      d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+    ></path>
+  </svg>
+);
+export const DurationIcon = () => (
+  <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="inline">
+    <path
+      fill="#fff"
+      d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"
+    ></path>
+    <path
+      fill="currentcolor"
+      d="M8 3.25a.75.75 0 01.75.75v3.25H11a.75.75 0 010 1.5H7.25V4A.75.75 0 018 3.25z"
     ></path>
   </svg>
 );
