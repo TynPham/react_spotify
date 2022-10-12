@@ -112,7 +112,13 @@ export const ETCIcon = () => (
   </svg>
 );
 export const DurationIcon = () => (
-  <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="inline">
+  <svg
+    role="img"
+    height="16"
+    width="16"
+    viewBox="0 0 16 16"
+    className="inline mb-[4px]"
+  >
     <path
       fill="#fff"
       d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"

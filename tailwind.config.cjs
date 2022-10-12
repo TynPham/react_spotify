@@ -9,6 +9,7 @@ module.exports = {
       },
       colors: {
         "green-rgba": "rgba(72, 144, 120, 0.3)",
+        "bar-hover": "hsla(0,0%,100%,0.1);",
       },
     },
   },

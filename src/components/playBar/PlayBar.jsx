@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { DataSongs } from "../../context/Context";
 
 const PlayBar = () => {
+  const { songs, handleSongs, listSongs } = useContext(DataSongs);
+
+  const handleNext = () => {
+    if (songs.id === listSongs.length - 1) {
+      handleSongs(0);
+    } else {
+      handleSongs(songs.id + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (songs.id === 0) {
+      handleSongs(listSongs.length - 1);
+    } else {
+      handleSongs(songs.id - 1);
+    }
+  };
+
   return (
     <AudioPlayer
-      src={
-        "https://seaf20.iiiijjjjij.com/files/2020/8/7/hom_nay_em_cuoi_roi_khai_dang_official_lyric_video_8202815258287763929.mp3"
-      }
+      src={songs.url}
       showSkipControls={true}
       showJumpControls={false}
+      onClickNext={handleNext}
+      onClickPrevious={handlePrev}
     />
   );
 };
