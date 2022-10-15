@@ -3,8 +3,9 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { DataSongs } from "../../context/Context";
 
-const PlayBar = () => {
-  const { songs, handleSongs, listSongs } = useContext(DataSongs);
+const PlayBar = ({ playRef }) => {
+  const { songs, handleSongs, listSongs, handlePlay, handlePause } =
+    useContext(DataSongs);
 
   const handleNext = () => {
     if (songs.id === listSongs.length - 1) {
@@ -24,11 +25,15 @@ const PlayBar = () => {
 
   return (
     <AudioPlayer
+      ref={playRef}
       src={songs.url}
       showSkipControls={true}
       showJumpControls={false}
       onClickNext={handleNext}
       onClickPrevious={handlePrev}
+      onEnded={handleNext}
+      onPlay={handlePlay}
+      onPause={handlePause}
     />
   );
 };

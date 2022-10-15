@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import { DurationIcon } from "../../icons";
+import { DurationIcon, SmPauseIcon, SmPlayIcon } from "../../icons";
 import { DataSongs } from "../../context/Context";
+import AnimationLine from "../animationLine/AnimationLine";
 
-const ListSongs = () => {
+const ListSongs = ({ parentRef }) => {
   const [indexSongs, setIndexSongs] = useState(0);
 
-  const { listSongs, handleSongs, songs } = useContext(DataSongs);
+  const { listSongs, handleSongs, songs, isPlaying, handlePlay, handlePause } =
+    useContext(DataSongs);
 
   const handleClickSongs = (id) => {
     setIndexSongs(id);
@@ -15,6 +17,15 @@ const ListSongs = () => {
   useEffect(() => {
     setIndexSongs(songs.id);
   }, [songs]);
+
+  useEffect(() => {
+    if (indexSongs > 2) {
+      parentRef.current.scroll({
+        top: 60 * (indexSongs - 2),
+        behavior: "smooth",
+      });
+    }
+  }, [indexSongs]);
 
   return (
     <div className="w-full absolute top-[68%]">
@@ -42,7 +53,31 @@ const ListSongs = () => {
                   song.id === indexSongs ? "text-[#1ED670]" : ""
                 }`}
               >
-                {song.id + 1}
+                {isPlaying && song.id === indexSongs ? (
+                  <>
+                    <div className="relative group-hover:invisible">
+                      <AnimationLine />
+                    </div>
+                    <span
+                      onClick={handlePause}
+                      className="hidden group-hover:inline"
+                    >
+                      <SmPauseIcon />
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="inline group-hover:hidden">
+                      {song.id + 1}
+                    </span>
+                    <span
+                      onClick={handlePlay}
+                      className="hidden group-hover:inline"
+                    >
+                      <SmPlayIcon />
+                    </span>
+                  </>
+                )}
               </td>
               <td className="p-1 flex">
                 <div className="w-[40px] h-[40px] mr-4 mt-[5px]">
