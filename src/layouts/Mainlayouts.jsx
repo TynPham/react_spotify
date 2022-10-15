@@ -14,16 +14,12 @@ const Mainlayouts = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
-    if (!isPlaying) {
-      setIsPlaying(true);
-      playBarRef.current.audio.current.play();
-    }
+    setIsPlaying(true);
+    playBarRef.current.audio.current.play();
   };
   const handlePause = () => {
-    if (isPlaying) {
-      setIsPlaying(false);
-      playBarRef.current.audio.current.pause();
-    }
+    setIsPlaying(false);
+    playBarRef.current.audio.current.pause();
   };
 
   const handleSongs = (id) => {

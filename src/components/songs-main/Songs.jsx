@@ -53,17 +53,14 @@ const Songs = () => {
         ref={playBarRef}
         className="flex items-center fixed w-[calc(100%_-_273px)] p-2 bg-[#2a443c] rounded-tl-[0.5rem] top-[64px] invisible transition-all duration-400 opacity-0"
       >
-        <button className="bg-[#1ED670] w-[56px] h-[56px] rounded-full mr-4 hover:scale-[1.05]">
-          <span
-            onClick={handlePlay}
-            className={`${isPlaying ? "hidden" : "inline"}`}
-          >
+        <button
+          onClick={isPlaying ? handlePause : handlePlay}
+          className="bg-[#1ED670] w-[56px] h-[56px] rounded-full mr-4 hover:scale-[1.05] active:scale-[1] active:opacity-60"
+        >
+          <span className={`${isPlaying ? "hidden" : "inline"}`}>
             <PlayIcon />
           </span>
-          <span
-            onClick={handlePause}
-            className={`${isPlaying ? "inline" : "hidden"}`}
-          >
+          <span className={`${isPlaying ? "inline" : "hidden"}`}>
             <PauseIcon />
           </span>
         </button>

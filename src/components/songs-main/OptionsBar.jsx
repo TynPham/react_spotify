@@ -16,22 +16,18 @@ const OptionsBar = () => {
   const handleLike = () => {
     setIsLike(!isLike);
   };
-
   return (
     <div className="w-full h-[232px] bg-green-rgba-ln">
       <div className="h-[104px] w-full p-4 lg:p-[30px]">
         <div className="flex items-center z-[2]">
-          <button className="bg-[#1ED670] w-[56px] h-[56px] rounded-full mr-8 hover:scale-[1.05]">
-            <span
-              onClick={handlePlay}
-              className={`${isPlaying ? "hidden" : "inline"}`}
-            >
+          <button
+            onClick={isPlaying ? handlePause : handlePlay}
+            className="bg-[#1ED670] w-[56px] h-[56px] rounded-full mr-8 hover:scale-[1.05] active:scale-[1] active:opacity-60"
+          >
+            <span className={`${isPlaying ? "hidden" : "inline"}`}>
               <PlayIcon />
             </span>
-            <span
-              onClick={handlePause}
-              className={`${isPlaying ? "inline" : "hidden"}`}
-            >
+            <span className={`${isPlaying ? "inline" : "hidden"}`}>
               <PauseIcon />
             </span>
           </button>
