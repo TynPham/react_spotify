@@ -22,7 +22,8 @@ body {
 }
 
 .rhap_container {
-  background-color: #000 !important;
+  background-color: #121212 !important;
+  width: 99vw !important;
 }
 .rhap_time {
   color: #fff !important;
@@ -67,7 +68,7 @@ body {
 }
 .rhap_repeat-button {
   position: absolute;
-  left: 55vw;
+  left: 56vw;
   top: 35%;
   transform: translate(-50%, -50%);
 }
@@ -99,5 +100,46 @@ body {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .rhap_main-controls {
+    margin-left: 37px;
+  }
+  .rhap_repeat-button {
+    left: 61vw;
+    top: 35%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .rhap_time {
+    font-size: 6px !important;
+  }
+  .rhap_main-controls-button svg {
+    margin-top: 10px;
+  }
+  .rhap_main-controls-button:first-child svg,
+  .rhap_main-controls-button:last-child svg {
+    margin-top: 7px !important;
+  }
+  .rhap_additional-controls .rhap_button-clear svg {
+    width: 15px;
+    height: 15px;
+  }
+  .rhap_volume-bar {
+    height: 3px !important;
+  }
+  .rhap_main-controls-button:first-child,
+  .rhap_main-controls-button:last-child {
+    font-size: 17px !important;
+    width: 13px !important;
+  }
+  .rhap_volume-button .rhap_button-clear svg {
+    width: 16px;
+  }
+  .rhap_play-pause-button {
+    font-size: 24px !important;
+    width: 24px !important;
   }
 }

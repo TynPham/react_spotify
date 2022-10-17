@@ -38,9 +38,9 @@ const Songs = () => {
     <div
       ref={divRef}
       onScroll={handleScroll}
-      className="songs bg-[#121212] h-[600px] rounded-lg overflow-hidden relative overflow-y-scroll"
+      className="songs bg-[#121212] lg:h-[88vh] lg:w-[99vw] h-[80vh] rounded-t-lg overflow-hidden relative overflow-y-scroll"
     >
-      <div className="relative h-[300px] overflow-hidden">
+      <div className="relative lg:h-[43%] h-[52%] overflow-hidden">
         <Title />
         <div
           ref={bgRef}
@@ -51,7 +51,7 @@ const Songs = () => {
       <ListSongs parentRef={divRef} />
       <div
         ref={playBarRef}
-        className="flex items-center fixed w-[calc(100%_-_273px)] p-2 bg-[#2a443c] rounded-tl-[0.5rem] top-[64px] invisible transition-all duration-400 opacity-0"
+        className="flex items-center fixed w-[calc(100%_-_273px)] lg:w-[98vw] p-2 bg-[#2a443c] rounded-tl-[0.5rem] top-[64px] invisible transition-all duration-400 opacity-0"
       >
         <button
           onClick={isPlaying ? handlePause : handlePlay}
@@ -68,7 +68,7 @@ const Songs = () => {
       </div>
       <div
         ref={headerRef}
-        className="flex w-[calc(100%_-_273px)] h-[32px] items-center fixed top-[133.2px] bg-[#1a1a1a] invisible transition-all duration-600 opacity-0"
+        className="flex w-[calc(100%_-_273px)] lg:w-[98vw] h-[32px] items-center fixed top-[133.2px] bg-[#1a1a1a] invisible transition-all duration-600 opacity-0"
       >
         <h4 className="w-[11.8%] text-center">#</h4>
         <h4 className="text-left text-[12px] w-[31.2%] font-medium">TITLE</h4>

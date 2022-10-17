@@ -18,7 +18,7 @@ const OptionsBar = () => {
   };
   return (
     <div className="w-full h-[232px] bg-green-rgba-ln">
-      <div className="h-[104px] w-full p-4 lg:p-[30px]">
+      <div className="h-[104px] w-full p-6 lg:p-[30px]">
         <div className="flex items-center z-[2]">
           <button
             onClick={isPlaying ? handlePause : handlePlay}

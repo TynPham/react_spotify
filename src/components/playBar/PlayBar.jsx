@@ -52,7 +52,7 @@ const PlayBar = ({ playRef }) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="fixed w-full bottom-0">
       <AudioPlayer
         ref={playRef}
         src={songs.url}
@@ -69,12 +69,12 @@ const PlayBar = ({ playRef }) => {
       <span
         ref={randomRef}
         onClick={handleRandom}
-        className="absolute left-[calc(42vw)] top-[34%] translate-x-[-50%] translate-y-[-50%] text-[#868686] cursor-pointer"
+        className="absolute lg:left-[39vw] left-[42vw] top-[34%] sm:top-[38%] translate-x-[-50%] translate-y-[-50%] text-[#868686] cursor-pointer"
       >
         <ShuffleIcon />
       </span>
       <div className="absolute top-[50%] translate-y-[-50%] left-[1%] flex items-center gap-[1rem]">
-        <div className="w-[56px] h-[56px]">
+        <div className="w-[56px] sm:w[30px] h-[56px] sm:h-[30px] sm:w-[30px]">
           <img
             className="w-full h-full object-cover object-center"
             src={songs.links.images[0].url}
@@ -82,8 +82,10 @@ const PlayBar = ({ playRef }) => {
           />
         </div>
         <div className="leading-[1] mb-[5px]">
-          <h3 className="text-sm font-medium">{songs.name}</h3>
-          <span className="text-[0.6875rem] text-[#b3b3b3]">
+          <h3 className="text-sm sm:text-[0.5rem] sm:leading-[0.5rem] font-medium sm:w-[90px]">
+            {songs.name}
+          </h3>
+          <span className="text-[0.6875rem] sm:text-[0.5rem] text-[#b3b3b3]">
             {songs.author}
           </span>
         </div>

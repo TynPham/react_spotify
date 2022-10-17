@@ -4,7 +4,7 @@ import Options from "./Options";
 
 const Sidebar = () => {
   return (
-    <div className="sideBar bg-[#121212] h-[600px] pt-3 rounded-lg px-6 relative">
+    <div className="sideBar lg:hidden bg-[#121212] h-[80vh] pt-3 rounded-t-lg px-6 relative">
       <Options />
       <ul></ul>
       <div className="install-app flex h-10 gap-4 items-center opacity-70 hover:opacity-100 cursor-pointer absolute bottom-0 transition-all">

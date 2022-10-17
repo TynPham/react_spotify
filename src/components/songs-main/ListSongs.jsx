@@ -28,7 +28,7 @@ const ListSongs = ({ parentRef }) => {
   }, [indexSongs]);
 
   return (
-    <div className="w-full absolute top-[68%]">
+    <div className="w-full absolute lg:top-[56%] top-[68%]">
       <table className="table-auto w-full">
         <thead className="sticky top-[72px] border-b border-[#b3b3b3] opacity-60">
           <tr className="opacity-60">
@@ -89,13 +89,15 @@ const ListSongs = ({ parentRef }) => {
                 </div>
                 <div>
                   <h4
-                    className={`text-base ${
+                    className={`text-xs ${
                       song.id === indexSongs ? "text-[#1ED670]" : ""
                     }`}
                   >
                     {song.name}
                   </h4>
-                  <span className="text-sm text-[#b3b3b3]">{song.author}</span>
+                  <span className="text-sm sm:text-[0.5rem] sm:leading-[0.5rem] text-[#b3b3b3]">
+                    {song.author}
+                  </span>
                 </div>
               </td>
               <td className="text-center text-sm p-1 opacity-60 group-hover:opacity-100">

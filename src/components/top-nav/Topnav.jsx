@@ -1,14 +1,14 @@
 import React from "react";
-import { CloseIcon, Homeicon, Img, SearchIcon, UserIcon } from "../../icons";
+import { CloseIcon, Homeicon, Logo, SearchIcon, UserIcon } from "../../icons";
 import { Link } from "react-router-dom";
 
 const Topnav = () => {
   return (
     <div className="topNav flex justify-between h-12 items-center">
       <Link to="/" className="ml-2">
-        <Img />
+        <Logo />
       </Link>
-      <div className="flex gap-4 ml-2">
+      <div className="flex gap-4 ml-2 sm:hidden">
         <Link
           to="/"
           className="w-12 h-12 rounded-full bg-[#242424] flex justify-center items-center"
