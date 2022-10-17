@@ -9,12 +9,12 @@ const Topnav = () => {
         <Img />
       </Link>
       <div className="flex gap-4 ml-2">
-        <a
-          href=""
+        <Link
+          to="/"
           className="w-12 h-12 rounded-full bg-[#242424] flex justify-center items-center"
         >
           <Homeicon />
-        </a>
+        </Link>
         <form
           className="flex items-center bg-[#242424] w-[340px] lg:w-[440px] text-sm rounded-[500px] py-[6px] px-[48px] justify-start relative border-2 border-transparent focus-within:border-white"
           action=""

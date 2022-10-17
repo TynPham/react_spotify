@@ -69,10 +69,25 @@ const PlayBar = ({ playRef }) => {
       <span
         ref={randomRef}
         onClick={handleRandom}
-        className="absolute left-[calc(42%)] top-[25%] text-[#868686] cursor-pointer"
+        className="absolute left-[calc(42vw)] top-[34%] translate-x-[-50%] translate-y-[-50%] text-[#868686] cursor-pointer"
       >
         <ShuffleIcon />
       </span>
+      <div className="absolute top-[50%] translate-y-[-50%] left-[1%] flex items-center gap-[1rem]">
+        <div className="w-[56px] h-[56px]">
+          <img
+            className="w-full h-full object-cover object-center"
+            src={songs.links.images[0].url}
+            alt="imgs"
+          />
+        </div>
+        <div className="leading-[1] mb-[5px]">
+          <h3 className="text-sm font-medium">{songs.name}</h3>
+          <span className="text-[0.6875rem] text-[#b3b3b3]">
+            {songs.author}
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
