@@ -15,13 +15,13 @@ const Songs = () => {
   const { isPlaying, handlePlay, handlePause } = useContext(DataSongs);
 
   const handleScroll = () => {
-    const opacity = divRef.current.scrollTop / 150;
-    bgRef.current.style.opacity = opacity;
+    const scroll = divRef.current.scrollTop / 150;
+    bgRef.current.style.opacity = scroll;
 
-    if (opacity > 1.5) {
+    if (scroll > 1.5) {
       playBarRef.current.style.visibility = "visible";
       playBarRef.current.style.opacity = 1;
-      if (opacity > 2.25) {
+      if (scroll > 2.25) {
         headerRef.current.style.visibility = "visible";
         headerRef.current.style.opacity = 1;
       } else {
@@ -40,7 +40,7 @@ const Songs = () => {
       onScroll={handleScroll}
       className="songs bg-[#121212] lg:h-[88vh] lg:w-[99vw] h-[80vh] rounded-t-lg overflow-hidden relative overflow-y-scroll"
     >
-      <div className="relative lg:h-[43%] h-[52%] overflow-hidden">
+      <div className="relative lg:h-[43%] h-[52%] overflow-hidden height_37">
         <Title />
         <div
           ref={bgRef}
@@ -51,7 +51,7 @@ const Songs = () => {
       <ListSongs parentRef={divRef} />
       <div
         ref={playBarRef}
-        className="flex items-center fixed w-[calc(100%_-_273px)] lg:w-[98vw] p-2 bg-[#2a443c] rounded-tl-[0.5rem] top-[64px] invisible transition-all duration-400 opacity-0"
+        className="flex items-center fixed w-[calc(100%_-_273px)] lg:w-[98vw] p-2 bg-[#2a443c] rounded-tl-[0.5rem] rounded-tr-[0.5rem] top-[64px] invisible transition-all duration-400 opacity-0 w-97vw"
       >
         <button
           onClick={isPlaying ? handlePause : handlePlay}
@@ -70,13 +70,15 @@ const Songs = () => {
         ref={headerRef}
         className="flex w-[calc(100%_-_273px)] lg:w-[98vw] h-[32px] items-center fixed top-[133.2px] bg-[#1a1a1a] invisible transition-all duration-600 opacity-0"
       >
-        <h4 className="w-[11.8%] text-center">#</h4>
-        <h4 className="text-left text-[12px] w-[31.2%] font-medium">TITLE</h4>
+        <h4 className="w-[11.8%] sm:w-[15.8%] text-center">#</h4>
+        <h4 className="text-left text-[12px] w-[31.2%] sm:w-[43.2%] font-medium">
+          TITLE
+        </h4>
         <h4 className="w-[20%] text-[12px] font-medium text-center">ALBUM</h4>
-        <h4 className="w-[27%] text-[12px] font-medium text-center">
+        <h4 className="w-[27%] text-[12px] font-medium text-center sm:hidden">
           DATE ADDED
         </h4>
-        <h4 className="w-[8.5%] text-center">
+        <h4 className="w-[8.5%] sm:w-[15%] text-center sm:text-end sm:mr-[20px]">
           <DurationIcon />
         </h4>
       </div>

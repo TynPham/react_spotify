@@ -13,11 +13,13 @@ const Mainlayouts = () => {
 
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlay = () => {
+  const handlePlay = (cdThumbAnimate) => {
+    cdThumbAnimate.play();
     setIsPlaying(true);
     playBarRef.current.audio.current.play();
   };
-  const handlePause = () => {
+  const handlePause = (cdThumbAnimate) => {
+    cdThumbAnimate.pause();
     setIsPlaying(false);
     playBarRef.current.audio.current.pause();
   };

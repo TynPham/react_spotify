@@ -1,7 +1,7 @@
 import React from "react";
 
 const Library = () => {
-  return <div className="flex items-center justify-center"></div>;
+  return <div className="">Your library</div>;
 };
 
 export default Library;

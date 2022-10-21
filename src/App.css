@@ -8,6 +8,16 @@ body {
   color: #fff;
   overflow: hidden;
 }
+.text_of {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: unset;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
@@ -68,9 +78,9 @@ body {
 }
 .rhap_repeat-button {
   position: absolute;
-  left: 56vw;
-  top: 35%;
-  transform: translate(-50%, -50%);
+  left: 56%;
+  top: 34%;
+  transform: translate(0%, -50%);
 }
 .rhap_progress-section {
   margin: 0 auto;
@@ -86,30 +96,24 @@ body {
 .rhap_volume-indicator {
   display: none;
 }
+.rhap_main-controls {
+  margin-left: 50px;
+}
 
 .active {
   color: #1ed670 !important;
 }
 
-@keyframes like {
-  0% {
-    transform: scale(1);
-  }
-  90% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
 @media only screen and (max-width: 1023px) {
   .rhap_main-controls {
-    margin-left: 37px;
+    margin-left: 44px;
   }
   .rhap_repeat-button {
-    left: 61vw;
-    top: 35%;
+    left: 60%;
+    top: 33%;
+  }
+  .rhap_container {
+    height: 100px !important;
   }
 }
 @media only screen and (max-width: 639px) {
@@ -141,5 +145,46 @@ body {
   .rhap_play-pause-button {
     font-size: 24px !important;
     width: 24px !important;
+  }
+  .rhap_repeat-button {
+    left: 63%;
+    top: 37%;
+  }
+  .rhap_progress-container {
+    margin: 0 calc(5px + 1%) !important;
+  }
+  .rhap_progress-section {
+    width: 76% !important;
+  }
+  .rhap_volume-button svg {
+    width: 15px !important;
+  }
+  .rhap_volume-container {
+    flex: 0 1 65px !important;
+  }
+  .rhap_stacked-reverse .rhap_controls-section {
+    margin-bottom: 0 !important;
+  }
+  .rhap_progress-bar {
+    height: 3px !important;
+  }
+  .randomBtn {
+    left: 37% !important;
+    top: 40% !important;
+  }
+  .rhap_container {
+    height: unset !important;
+  }
+  .p_15 {
+    padding: 15px !important;
+  }
+  .w-97vw {
+    width: 97vw !important;
+  }
+  .top_48 {
+    top: 48% !important;
+  }
+  .height_37 {
+    height: 37% !important;
   }
 }

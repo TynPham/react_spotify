@@ -28,14 +28,16 @@ const ListSongs = ({ parentRef }) => {
   }, [indexSongs]);
 
   return (
-    <div className="w-full absolute lg:top-[56%] top-[68%]">
+    <div className="w-full absolute lg:top-[53%] top-[68%] top_48">
       <table className="table-auto w-full">
-        <thead className="sticky top-[72px] border-b border-[#b3b3b3] opacity-60">
+        <thead className="top-[72px] border-b border-[#b3b3b3] opacity-60">
           <tr className="opacity-60">
             <th className="w-[10%]">#</th>
             <th className="text-left w-[25%] text-[12px] font-medium">TITLE</th>
             <th className="w-[20%] text-[12px] font-medium">ALBUM</th>
-            <th className="w-[20%] text-[12px] font-medium">DATE ADDED</th>
+            <th className="date w-[20%] text-[12px] font-medium sm:hidden">
+              DATE ADDED
+            </th>
             <th className="w-[10%]">
               <DurationIcon />
             </th>
@@ -49,7 +51,7 @@ const ListSongs = ({ parentRef }) => {
               onClick={() => handleClickSongs(song.id)}
             >
               <td
-                className={`text-center p-1 ${
+                className={`text-center sm:text-[0.75rem] pt-1 ${
                   song.id === indexSongs ? "text-[#1ED670]" : ""
                 }`}
               >
@@ -79,34 +81,34 @@ const ListSongs = ({ parentRef }) => {
                   </>
                 )}
               </td>
-              <td className="p-1 flex">
-                <div className="w-[40px] h-[40px] mr-4 mt-[5px]">
+              <td className="pt-1 flex">
+                <div className="w-[40px] h-[40px] sm:w-[30px] sm:h-[30px] mr-4 mt-[5px] sm:mr-3">
                   <img
                     className="w-full h-full object-cover"
                     src={song.links.images[0].url}
                     alt="singer"
                   />
                 </div>
-                <div>
+                <div className="flex-1 flex flex-col justify-around">
                   <h4
-                    className={`text-xs ${
+                    className={`text-base sm:text-[0.75rem] text_of ${
                       song.id === indexSongs ? "text-[#1ED670]" : ""
                     }`}
                   >
                     {song.name}
                   </h4>
-                  <span className="text-sm sm:text-[0.5rem] sm:leading-[0.5rem] text-[#b3b3b3]">
+                  <span className="text-xs sm:text-[0.5rem] sm:leading-[0.5rem] text-[#b3b3b3]">
                     {song.author}
                   </span>
                 </div>
               </td>
-              <td className="text-center text-sm p-1 opacity-60 group-hover:opacity-100">
+              <td className="text-center text-sm sm:text-[0.75rem] pt-1 opacity-60 group-hover:opacity-100">
                 {song.album}
               </td>
-              <td className="text-center text-sm p-1 opacity-60 group-hover:opacity-100">
+              <td className="date text-center text-sm pt-1 opacity-60 group-hover:opacity-100 sm:hidden">
                 {song.date}
               </td>
-              <td className="text-center text-sm p-1 opacity-60 group-hover:opacity-100">
+              <td className="text-center text-sm sm:text-[0.75rem] pt-1 opacity-60 group-hover:opacity-100">
                 {song.time}
               </td>
             </tr>

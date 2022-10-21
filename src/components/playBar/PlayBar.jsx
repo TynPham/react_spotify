@@ -4,8 +4,12 @@ import "react-h5-audio-player/lib/styles.css";
 import { DataSongs } from "../../context/Context";
 import { ShuffleIcon } from "../../icons";
 
+let cdThumbAnimate;
+
 const PlayBar = ({ playRef }) => {
   const [isRandom, setIsRandom] = useState(false);
+
+  const imgRef = useRef(null);
 
   const { songs, handleSongs, listSongs, handlePlay, handlePause } =
     useContext(DataSongs);
@@ -50,6 +54,13 @@ const PlayBar = ({ playRef }) => {
       loop.removeEventListener("click", active);
     };
   }, []);
+  useEffect(() => {
+    cdThumbAnimate = imgRef.current.animate([{ transform: "rotate(360deg)" }], {
+      duration: 5000,
+      iterations: Infinity,
+    });
+    cdThumbAnimate.pause();
+  }, []);
 
   return (
     <div className="fixed w-full bottom-0">
@@ -62,26 +73,29 @@ const PlayBar = ({ playRef }) => {
         onClickNext={handleNext}
         onClickPrevious={handlePrev}
         onEnded={isRandom ? handleRandomSong : handleNext}
-        onPlay={handlePlay}
-        onPause={handlePause}
+        onPlay={() => handlePlay(cdThumbAnimate)}
+        onPause={() => handlePause(cdThumbAnimate)}
         layout="stacked-reverse"
       />
       <span
         ref={randomRef}
         onClick={handleRandom}
-        className="absolute lg:left-[39vw] left-[42vw] top-[34%] sm:top-[38%] translate-x-[-50%] translate-y-[-50%] text-[#868686] cursor-pointer"
+        className="randomBtn absolute left-[44%] lg:left-[40%] top-[34%] lg:top-[32%] translate-x-[-100%] translate-y-[-50%] text-[#868686] cursor-pointer"
       >
         <ShuffleIcon />
       </span>
-      <div className="absolute top-[50%] translate-y-[-50%] left-[1%] flex items-center gap-[1rem]">
-        <div className="w-[56px] sm:w[30px] h-[56px] sm:h-[30px] sm:w-[30px]">
+      <div className="absolute top-[50%] translate-y-[-50%] left-[1%] flex items-center gap-[1rem] sm:gap-[0.5rem] sm:mt-[1px]">
+        <div
+          ref={imgRef}
+          className="w-[56px] sm:w[30px] h-[56px] sm:h-[30px] sm:w-[30px] sm:mb-[20px]"
+        >
           <img
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center rounded-full"
             src={songs.links.images[0].url}
             alt="imgs"
           />
         </div>
-        <div className="leading-[1] mb-[5px]">
+        <div className="leading-[1] mb-[5px] sm:mb-[20px] sm:leading-[0.75]">
           <h3 className="text-sm sm:text-[0.5rem] sm:leading-[0.5rem] font-medium sm:w-[90px]">
             {songs.name}
           </h3>
