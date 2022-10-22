@@ -19,6 +19,12 @@ const ListSongs = ({ parentRef }) => {
   }, [songs]);
 
   useEffect(() => {
+    if (indexSongs == 0) {
+      parentRef.current.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
     if (indexSongs > 2) {
       parentRef.current.scroll({
         top: 60 * (indexSongs - 2),
