@@ -68,7 +68,7 @@ const Songs = () => {
       </div>
       <div
         ref={headerRef}
-        className="flex w-[calc(100%_-_273px)] lg:w-[98vw] h-[32px] items-center fixed top-[133.2px] bg-[#1a1a1a] invisible transition-all duration-600 opacity-0"
+        className="flex w-[calc(100%_-_273px)] lg:w-[98vw] w-97vw h-[32px] items-center fixed top-[133.2px] bg-[#1a1a1a] invisible transition-all duration-600 opacity-0"
       >
         <h4 className="w-[11.8%] sm:w-[15.8%] text-center">#</h4>
         <h4 className="text-left text-[12px] w-[31.2%] sm:w-[43.2%] font-medium">
