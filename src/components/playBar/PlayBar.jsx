@@ -4,12 +4,8 @@ import "react-h5-audio-player/lib/styles.css";
 import { DataSongs } from "../../context/Context";
 import { ShuffleIcon } from "../../icons";
 
-let cdThumbAnimate;
-
-const PlayBar = ({ playRef }) => {
+const PlayBar = ({ playRef, imgRef }) => {
   const [isRandom, setIsRandom] = useState(false);
-
-  const imgRef = useRef(null);
 
   const { songs, handleSongs, listSongs, handlePlay, handlePause } =
     useContext(DataSongs);
@@ -54,13 +50,6 @@ const PlayBar = ({ playRef }) => {
       loop.removeEventListener("click", active);
     };
   }, []);
-  useEffect(() => {
-    cdThumbAnimate = imgRef.current.animate([{ transform: "rotate(360deg)" }], {
-      duration: 5000,
-      iterations: Infinity,
-    });
-    cdThumbAnimate.pause();
-  }, []);
 
   return (
     <div className="fixed w-full bottom-0">
@@ -73,8 +62,8 @@ const PlayBar = ({ playRef }) => {
         onClickNext={handleNext}
         onClickPrevious={handlePrev}
         onEnded={isRandom ? handleRandomSong : handleNext}
-        onPlay={() => handlePlay(cdThumbAnimate)}
-        onPause={() => handlePause(cdThumbAnimate)}
+        onPlay={handlePlay}
+        onPause={handlePause}
         layout="stacked-reverse"
       />
       <span
